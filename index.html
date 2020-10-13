@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@tylershuster">
+  <meta name="twitter:title" content="An ode to the pomegranate">
+  <meta name="twitter:description" content="Behold the fruit's radiant splendor.">
+  <meta name="twitter:image" content="https://t.fust.us/pom/card.jpg">
+  <title>Pomegranate</title>
+  <style>
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      38% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes rotateReverse {
+      0% {
+        transform: rotate(360deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    @keyframes sway {
+      0% {
+        transform: skewX(0deg);
+      }
+      50% {
+        transform: skewX(2deg);
+      }
+      100% {
+        transform: skewX(0deg);
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(1vw);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  </style>
+  <style>
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(white 36%, #fffcce 62%);
+    }
+
+    body * {
+      position: absolute;
+    }
+
+    .sway img {
+      animation: 10s sway infinite;
+    }
+
+    #upper_right_ornament,
+    #upper_left_ornament,
+    #lower_left_ornament,
+    #lower_right_ornament {
+      height: 50vh;
+      width: 62vh;
+    }
+
+    #upper_right_ornament,
+    #upper_left_ornament {
+      top: -3vw;
+    }
+
+    #lower_left_ornament,
+    #lower_right_ornament {
+      bottom: -3vw;
+    }
+
+    #upper_left_ornament,
+    #lower_left_ornament {
+      left: -4vw;
+    }
+
+    #upper_right_ornament,
+    #lower_right_ornament {
+      right: -4vw;
+    }
+
+    #upper_left_ornament {
+      transform: scaleY(-1) scaleX(-1) rotate(-14deg);
+    }
+
+    #lower_left_ornament {
+      transform: scaleX(-1) rotate(-14deg);
+    }
+
+    #upper_right_ornament {
+      transform: scaleY(-1) rotate(-14deg);
+    }
+
+    #lower_right_ornament {
+      transform: rotate(-14deg);
+    }
+
+    #upper_right_fruit,
+    #upper_left_fruit,
+    #lower_left_fruit,
+    #lower_right_fruit {
+      height: 32vh;
+      z-index: 999;
+    }
+
+    #upper_right_fruit,
+    #upper_left_fruit {
+      top: -3vw;
+    }
+
+    #lower_left_fruit,
+    #lower_right_fruit {
+      bottom: -3vw;
+    }
+
+    #upper_left_fruit,
+    #lower_left_fruit {
+      left: 14vw;
+    }
+
+    #upper_right_fruit,
+    #lower_right_fruit {
+      right: 14vw;
+    }
+
+    #upper_left_fruit {
+      transform: scaleY(-1) rotate(-94deg);
+    }
+
+    #lower_left_fruit {
+      transform: rotate(-94deg);
+    }
+
+    #upper_right_fruit {
+      transform: scaleY(-1) scaleX(-1) rotate(-94deg);
+    }
+
+    #lower_right_fruit {
+      transform: scaleX(-1) rotate(-94deg);
+    }
+
+    #center_fruit {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 12vw;
+      animation: 30s pulse infinite;
+    }
+
+    #arils {
+      width: 100%;
+      height: 100%;
+      animation: 120s rotate infinite;
+    }
+
+    .aril {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 2vw;
+      width: 3vw;
+    }
+
+    .aril img {
+      width: 100%;
+      height: auto;
+      animation: 10s bounce infinite;
+    }
+
+    #aril_1 {
+      transform: rotate(10deg) translateX(9vw);
+    }
+    #aril_1 img {
+      animation-delay: -1200ms;
+    }
+    #aril_2 {
+      transform: rotate(20deg) translateX(9vw);
+    }
+    #aril_2 img {
+      animation-delay: -1700ms;
+    }
+    #aril_3 {
+      transform: rotate(30deg) translateX(9vw);
+    }
+    #aril_3 img {
+      animation-delay: -3000ms;
+    }
+    #aril_4 {
+      transform: rotate(40deg) translateX(9vw);
+    }
+    #aril_4 img {
+      animation-delay: -2100ms;
+    }
+    #aril_5 {
+      transform: rotate(50deg) translateX(9vw);
+    }
+    #aril_5 img {
+      animation-delay: -1500ms;
+    }
+    #aril_6 {
+      transform: rotate(60deg) translateX(9vw);
+    }
+    #aril_6 img {
+      animation-delay: -300ms;
+    }
+    #aril_7 {
+      transform: rotate(70deg) translateX(9vw);
+    }
+    #aril_7 img {
+      animation-delay: -2700ms;
+    }
+    #aril_8 {
+      transform: rotate(80deg) translateX(9vw);
+    }
+    #aril_8 img {
+      animation-delay: -2200ms;
+    }
+    #aril_9 {
+      transform: rotate(90deg) translateX(9vw);
+    }
+    #aril_9 img {
+      animation-delay: -900ms;
+    }
+    #aril_10 {
+      transform: rotate(100deg) translateX(9vw);
+    }
+    #aril_10 img {
+      animation-delay: -1100ms;
+    }
+    #aril_11 {
+      transform: rotate(110deg) translateX(9vw);
+    }
+    #aril_11 img {
+      animation-delay: -400ms;
+    }
+    #aril_12 {
+      transform: rotate(120deg) translateX(9vw);
+    }
+    #aril_12 img {
+      animation-delay: -1000ms;
+    }
+    #aril_13 {
+      transform: rotate(130deg) translateX(9vw);
+    }
+    #aril_13 img {
+      animation-delay: -3200ms;
+    }
+    #aril_14 {
+      transform: rotate(140deg) translateX(9vw);
+    }
+    #aril_14 img {
+      animation-delay: -700ms;
+    }
+    #aril_15 {
+      transform: rotate(150deg) translateX(9vw);
+    }
+    #aril_15 img {
+      animation-delay: -2400ms;
+    }
+    #aril_16 {
+      transform: rotate(160deg) translateX(9vw);
+    }
+    #aril_16 img {
+      animation-delay: -200ms;
+    }
+    #aril_17 {
+      transform: rotate(170deg) translateX(9vw);
+    }
+    #aril_17 img {
+      animation-delay: -2600ms;
+    }
+    #aril_18 {
+      transform: rotate(180deg) translateX(9vw);
+    }
+    #aril_18 img {
+      animation-delay: -800ms;
+    }
+    #aril_19 {
+      transform: rotate(190deg) translateX(9vw);
+    }
+    #aril_19 img {
+      animation-delay: -1900ms;
+    }
+    #aril_20 {
+      transform: rotate(200deg) translateX(9vw);
+    }
+    #aril_20 img {
+      animation-delay: -3100ms;
+    }
+    #aril_21 {
+      transform: rotate(210deg) translateX(9vw);
+    }
+    #aril_21 img {
+      animation-delay: -2900ms;
+    }
+    #aril_22 {
+      transform: rotate(220deg) translateX(9vw);
+    }
+    #aril_22 img {
+      animation-delay: -600ms;
+    }
+    #aril_23 {
+      transform: rotate(230deg) translateX(9vw);
+    }
+    #aril_23 img {
+      animation-delay: -3400ms;
+    }
+    #aril_24 {
+      transform: rotate(240deg) translateX(9vw);
+    }
+    #aril_24 img {
+      animation-delay: -500ms;
+    }
+    #aril_25 {
+      transform: rotate(250deg) translateX(9vw);
+    }
+    #aril_25 img {
+      animation-delay: -2300ms;
+    }
+    #aril_26 {
+      transform: rotate(260deg) translateX(9vw);
+    }
+    #aril_26 img {
+      animation-delay: -2000ms;
+    }
+    #aril_27 {
+      transform: rotate(270deg) translateX(9vw);
+    }
+    #aril_27 img {
+      animation-delay: -1800ms;
+    }
+    #aril_28 {
+      transform: rotate(280deg) translateX(9vw);
+    }
+    #aril_28 img {
+      animation-delay: -2500ms;
+    }
+    #aril_29 {
+      transform: rotate(290deg) translateX(9vw);
+    }
+    #aril_29 img {
+      animation-delay: -3300ms;
+    }
+    #aril_30 {
+      transform: rotate(300deg) translateX(9vw);
+    }
+    #aril_30 img {
+      animation-delay: -3600ms;
+    }
+    #aril_31 {
+      transform: rotate(310deg) translateX(9vw);
+    }
+    #aril_31 img {
+      animation-delay: -3500ms;
+    }
+    #aril_32 {
+      transform: rotate(320deg) translateX(9vw);
+    }
+    #aril_32 img {
+      animation-delay: -100ms;
+    }
+    #aril_33 {
+      transform: rotate(330deg) translateX(9vw);
+    }
+    #aril_33 img {
+      animation-delay: -1600ms;
+    }
+    #aril_34 {
+      transform: rotate(340deg) translateX(9vw);
+    }
+    #aril_34 img {
+      animation-delay: -2800ms;
+    }
+    #aril_35 {
+      transform: rotate(350deg) translateX(9vw);
+    }
+    #aril_35 img {
+      animation-delay: -1400ms;
+    }
+    #aril_36 {
+      transform: rotate(360deg) translateX(9vw);
+    }
+    #aril_36 img {
+      animation-delay: -1300ms;
+    }
+
+    #core_ring {
+      width: 100%;
+      height: 100%;
+      animation: 200s rotate infinite;
+    }
+
+    .core {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 6vw;
+      width: 6vw;
+    }
+
+    .core img {
+      width: 100%;
+      height: auto;
+      animation: 60s rotateReverse infinite;
+    }
+
+    #core_1 {
+      transform: rotate(0deg) translateX(25vw);
+    }
+    #core_1 img {
+      animation-delay: 300ms;
+    }
+    #core_2 {
+      transform: rotate(20deg) translateX(25vw);
+    }
+    #core_2 img {
+      animation-delay: 1700ms;
+    }
+    #core_3 {
+      transform: rotate(40deg) translateX(25vw);
+    }
+    #core_3 img {
+      animation-delay: 700ms;
+    }
+    #core_4 {
+      transform: rotate(60deg) translateX(25vw);
+    }
+    #core_4 img {
+      animation-delay: 600ms;
+    }
+    #core_5 {
+      transform: rotate(80deg) translateX(25vw);
+    }
+    #core_5 img {
+      animation-delay: 1400ms;
+    }
+    #core_6 {
+      transform: rotate(100deg) translateX(25vw);
+    }
+    #core_6 img {
+      animation-delay: 1600ms;
+    }
+    #core_7 {
+      transform: rotate(120deg) translateX(25vw);
+    }
+    #core_7 img {
+      animation-delay: 100ms;
+    }
+    #core_8 {
+      transform: rotate(140deg) translateX(25vw);
+    }
+    #core_8 img {
+      animation-delay: 1500ms;
+    }
+    #core_9 {
+      transform: rotate(160deg) translateX(25vw);
+    }
+    #core_9 img {
+      animation-delay: 1100ms;
+    }
+    #core_10 {
+      transform: rotate(180deg) translateX(25vw);
+    }
+    #core_10 img {
+      animation-delay: 1800ms;
+    }
+    #core_11 {
+      transform: rotate(200deg) translateX(25vw);
+    }
+    #core_11 img {
+      animation-delay: 400ms;
+    }
+    #core_12 {
+      transform: rotate(220deg) translateX(25vw);
+    }
+    #core_12 img {
+      animation-delay: 1200ms;
+    }
+    #core_13 {
+      transform: rotate(240deg) translateX(25vw);
+    }
+    #core_13 img {
+      animation-delay: 1300ms;
+    }
+    #core_14 {
+      transform: rotate(260deg) translateX(25vw);
+    }
+    #core_14 img {
+      animation-delay: 500ms;
+    }
+    #core_15 {
+      transform: rotate(280deg) translateX(25vw);
+    }
+    #core_15 img {
+      animation-delay: 800ms;
+    }
+    #core_16 {
+      transform: rotate(300deg) translateX(25vw);
+    }
+    #core_16 img {
+      animation-delay: 900ms;
+    }
+    #core_17 {
+      transform: rotate(320deg) translateX(25vw);
+    }
+    #core_17 img {
+      animation-delay: 200ms;
+    }
+    #core_18 {
+      transform: rotate(340deg) translateX(25vw);
+    }
+    #core_18 img {
+      animation-delay: 1000ms;
+    }
+
+
+
+
+    #flower_ring {
+      width: 100%;
+      height: 100%;
+      animation: 120s rotateReverse infinite;
+    }
+
+    .flower_bisected {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 7vw;
+    }
+
+    #flower_bisected_1 {
+      transform: rotate(0deg) translateX(17vw);
+    }
+    #flower_bisected_2 {
+      transform: rotate(30deg) translateX(17vw);
+    }
+    #flower_bisected_3 {
+      transform: rotate(60deg) translateX(17vw);
+    }
+    #flower_bisected_4 {
+      transform: rotate(90deg) translateX(17vw);
+    }
+    #flower_bisected_5 {
+      transform: rotate(120deg) translateX(17vw);
+    }
+    #flower_bisected_6 {
+      transform: rotate(150deg) translateX(17vw);
+    }
+    #flower_bisected_7 {
+      transform: rotate(180deg) translateX(17vw);
+    }
+    #flower_bisected_8 {
+      transform: rotate(210deg) translateX(17vw);
+    }
+    #flower_bisected_9 {
+      transform: rotate(240deg) translateX(17vw);
+    }
+    #flower_bisected_10 {
+      transform: rotate(270deg) translateX(17vw);
+    }
+    #flower_bisected_11 {
+      transform: rotate(300deg) translateX(17vw);
+    }
+    #flower_bisected_12 {
+      transform: rotate(330deg) translateX(17vw);
+    }
+  </style>
+</head>
+<body>
+  <div class="sway" id="upper_left_ornament"><img src="flower.png" /></div>
+  <div class="sway" id="upper_right_ornament"><img src="flower.png" /></div>
+  <div class="sway" id="lower_left_ornament"><img src="flower.png" /></div>
+  <div class="sway" id="lower_right_ornament"><img src="flower.png" /></div>
+
+
+  <img src="fruit.png" id="upper_left_fruit" />
+  <img src="fruit.png" id="upper_right_fruit" />
+  <img src="fruit.png" id="lower_left_fruit" />
+  <img src="fruit.png" id="lower_right_fruit" />
+
+  <img src="fruit_bisected.png" id="center_fruit" />
+
+  <div id="arils">
+    <div class="aril" id="aril_1"><img src="aril.png"></div>
+    <div class="aril" id="aril_2"><img src="aril.png"></div>
+    <div class="aril" id="aril_3"><img src="aril.png"></div>
+    <div class="aril" id="aril_4"><img src="aril.png"></div>
+    <div class="aril" id="aril_5"><img src="aril.png"></div>
+    <div class="aril" id="aril_6"><img src="aril.png"></div>
+    <div class="aril" id="aril_7"><img src="aril.png"></div>
+    <div class="aril" id="aril_8"><img src="aril.png"></div>
+    <div class="aril" id="aril_9"><img src="aril.png"></div>
+    <div class="aril" id="aril_10"><img src="aril.png"></div>
+    <div class="aril" id="aril_11"><img src="aril.png"></div>
+    <div class="aril" id="aril_12"><img src="aril.png"></div>
+    <div class="aril" id="aril_13"><img src="aril.png"></div>
+    <div class="aril" id="aril_14"><img src="aril.png"></div>
+    <div class="aril" id="aril_15"><img src="aril.png"></div>
+    <div class="aril" id="aril_16"><img src="aril.png"></div>
+    <div class="aril" id="aril_17"><img src="aril.png"></div>
+    <div class="aril" id="aril_18"><img src="aril.png"></div>
+    <div class="aril" id="aril_19"><img src="aril.png"></div>
+    <div class="aril" id="aril_20"><img src="aril.png"></div>
+    <div class="aril" id="aril_21"><img src="aril.png"></div>
+    <div class="aril" id="aril_22"><img src="aril.png"></div>
+    <div class="aril" id="aril_23"><img src="aril.png"></div>
+    <div class="aril" id="aril_24"><img src="aril.png"></div>
+    <div class="aril" id="aril_25"><img src="aril.png"></div>
+    <div class="aril" id="aril_26"><img src="aril.png"></div>
+    <div class="aril" id="aril_27"><img src="aril.png"></div>
+    <div class="aril" id="aril_28"><img src="aril.png"></div>
+    <div class="aril" id="aril_29"><img src="aril.png"></div>
+    <div class="aril" id="aril_30"><img src="aril.png"></div>
+    <div class="aril" id="aril_31"><img src="aril.png"></div>
+    <div class="aril" id="aril_32"><img src="aril.png"></div>
+    <div class="aril" id="aril_33"><img src="aril.png"></div>
+    <div class="aril" id="aril_34"><img src="aril.png"></div>
+    <div class="aril" id="aril_35"><img src="aril.png"></div>
+    <div class="aril" id="aril_36"><img src="aril.png"></div>
+  </div>
+
+  <div id="core_ring">
+    <div class="core" id="core_1"><img src="core.png"></div>
+    <div class="core" id="core_2"><img src="core.png"></div>
+    <div class="core" id="core_3"><img src="core.png"></div>
+    <div class="core" id="core_4"><img src="core.png"></div>
+    <div class="core" id="core_5"><img src="core.png"></div>
+    <div class="core" id="core_6"><img src="core.png"></div>
+    <div class="core" id="core_7"><img src="core.png"></div>
+    <div class="core" id="core_8"><img src="core.png"></div>
+    <div class="core" id="core_9"><img src="core.png"></div>
+    <div class="core" id="core_10"><img src="core.png"></div>
+    <div class="core" id="core_11"><img src="core.png"></div>
+    <div class="core" id="core_12"><img src="core.png"></div>
+    <div class="core" id="core_13"><img src="core.png"></div>
+    <div class="core" id="core_14"><img src="core.png"></div>
+    <div class="core" id="core_15"><img src="core.png"></div>
+    <div class="core" id="core_16"><img src="core.png"></div>
+    <div class="core" id="core_17"><img src="core.png"></div>
+    <div class="core" id="core_18"><img src="core.png"></div>
+  </div>
+
+  <div id="flower_ring">
+    <img src="flower_bisected.png" alt="" class="flower_bisected" id="flower_bisected_1">
+    <img src="flower_bisected.png" alt="" class="flower_bisected" id="flower_bisected_2">
+    <img src="flower_bisected.png" alt="" class="flower_bisected" id="flower_bisected_3">
+    <img src="flower_bisected.png" alt="" class="flower_bisected" id="flower_bisected_4">
+    <img src="flower_bisected.png" alt="" class="flower_bisected" id="flower_bisected_5">
+    <img src="flower_bisected.png" alt="" class="flower_bisected" id="flower_bisected_6">
+    <img src="flower_bisected.png" alt="" class="flower_bisected" id="flower_bisected_7">
+    <img src="flower_bisected.png" alt="" class="flower_bisected" id="flower_bisected_8">
+    <img src="flower_bisected.png" alt="" class="flower_bisected" id="flower_bisected_9">
+    <img src="flower_bisected.png" alt="" class="flower_bisected" id="flower_bisected_10">
+    <img src="flower_bisected.png" alt="" class="flower_bisected" id="flower_bisected_11">
+    <img src="flower_bisected.png" alt="" class="flower_bisected" id="flower_bisected_12">
+  </div>
+
+
+</body>
+</html>
